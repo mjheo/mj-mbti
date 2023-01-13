@@ -1,12 +1,47 @@
 const main = document.querySelector("#main");
 const qna = document.querySelector("#qna"); //const : 변수를 상수를 만들어 주는것 var랑은 좀 다름
 const result = document.querySelector("#result");
-const select = [0,0,0,0,0,0,0,0,0,0,0,0];
+const select = [];
 const endPoint = 12
 
 function calResult(){
-  var result = select.indexOf(Math.max(...select)); //최대값 반환 | ... :전개구문 (선택한 배열 펼쳐!)
-  return result;
+  var pointArray = [
+    { name: 'mouse', value:0, key:0 },
+    { name: 'cow', value:0, key:1 },
+    { name: 'tiger', value:0, key:2 },
+    { name: 'rabbit', value:0, key:3 },
+    { name: 'dragon', value:0, key:4 },
+    { name: 'snake', value:0, key:5 },
+    { name: 'horse', value:0, key:6 },
+    { name: 'sheep', value:0, key:7 },
+    { name: 'monkey', value:0, key:8 },
+    { name: 'chick', value:0, key:9 },
+    { name: 'dog', value:0, key:10 },
+    { name: 'pig', value:0, key:11 },
+  ]
+  for(let i = 0; i < endPoint; i++){
+    var target = qnaList[i].a[select[i]];
+    for(let j = 0; j < target.type.length; j++){
+      for(let k = 0; k < pointArray.length; k++){
+        if (target.type[j] === pointArray[k].name) {
+          pointArray[k].value += 1;                       // 대답 리스트에 해당하는 타입에 있는 pointArray에서 동일한 동물을 찾아 value를 1씩 올려주는 작업
+        }
+      }
+    }
+  }
+
+  var resultArray = pointArray.sort(function (a,b){
+    if (a.value > b.value) {
+      return -1;
+    }
+    if (a.value < b.value) {
+      return 1;
+    }
+    return 0;
+  });
+  console.log(resultArray);
+  let resultword = resultArray[0].key;
+  return resultword;
 }
 
 function setResult(){
@@ -41,6 +76,7 @@ function goResult(){
   setResult();
 }
 
+
 function addAnswer(answerText, qIdx, idx){
   var a = document.querySelector(".answerBox");
   var answer = document.createElement('button'); //버튼 만들기
@@ -60,10 +96,7 @@ function addAnswer(answerText, qIdx, idx){
       children[i].style.animation = "fadeOut 0.5s";
     }
     setTimeout(() => {
-      var target = qnaList[qIdx].a[idx].type;
-      for(let i = 0; i < target.length; i++){
-        select[target[i]] += 1;
-      }
+      select[qIdx] = idx;                                            // qidx = 질문, idx = 대답번호
       for(let i = 0; i < children.length; i++){                      // i가 증가하는데, 증가하면서 총 길이보다는 적을때까지 반복
         children[i].style.display = 'none';
       }

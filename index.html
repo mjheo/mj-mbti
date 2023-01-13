@@ -1,29 +1,35 @@
 <!DOCTYPE html>
 <html lang="ko" dir="ltr">
   <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <meta name="author" content="panda-mj">
+    <meta name="keywords" content="십이간지 연애유">
+    <meta name="description" content="십이간지 연애유형">
+    <!-- sns share -->
+    <meta property="og:url" content="" />
+    <meta property="og:title" content="십이간지 연애유형" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="img/share.png" />
+    <meta property="og:description" content="십이간지로 알아보는 연애유형" />
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="img/favicon.ico" />
+
+    <title>십이간지 연애유형</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> <!-- 부트스트랩 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap" rel="stylesheet"> <!-- 구글 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet"> <!-- 구글 폰트 -->
     <link rel="stylesheet" href="./css/default.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/qna.css">
+    <link rel="stylesheet" href="./css/result.css">
     <link rel="stylesheet" href="./css/animation.css">
-    <!-- Google Tag Manager -->
-      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-W4TVFHB');</script>
-    <!-- End Google Tag Manager -->
   </head>
   <body>
-
     <div class="container">
-      <section id="main" class="mx-auto mt-4 pt-5 pb-5 px-3"> <!-- m : margin / p : padding -->
-        <h2>십이간지로 알아보는 연애유형</h2>
+      <section id="main" class="mx-auto my-4 pt-5 pb-5 px-3"> <!-- m : margin / p : padding -->
+        <h1>십이간지로 알아보는 연애유형</h1>
           <!-- ㄴ섹션이랑 동일하게 마진으로 공백을 만들면 섹션이랑 겹침 -> 패딩으로 공백 주기 -->
         <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"> <!-- 이미지가 12의 6만큼만 적용 됨 -->
           <img src="./img/main.png" alt="mainImage" class="img-fluid">
@@ -37,24 +43,29 @@
       </section>
 
       <section id="qna">
-        <div class="qBox">
-
+        <div class="status mx-auto mt-5">
+          <div class="statusBar"></div>
         </div>
-        <div class="answerBox">
-
-        </div>
+        <div class="qBox my-5 py-3 px-2 mx-auto"></div>
+        <div class="answerBox"></div>
       </section>
 
-      <section id="result">
+      <section id="result" class="mx-auto my-4 pt-5 pb-5 px-5">
+        <h1>당신의 결과는?!</h1>
+        <div class="resultName">
 
+        </div>
+        <div id="resultImg" class="my-3 col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+
+        </div>
+        <div class="resultDesc">
+
+        </div>
+        <button type="button" class="kakao mt-5 py-2 px-3">
+          공유하기</button>
       </section>
-      
       <script src="./js/data.js" charset="utf-8"></script>
       <script src="./js/start.js" charset="utf-8"></script> <!-- 자바 코드가 길면 위에 있을 때, 로딩시간이 길어질 수 있음 -->
-          <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W4TVFHB"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     </div>
   </body>
 </html>

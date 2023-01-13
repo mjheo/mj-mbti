@@ -17,3 +17,13 @@
   from { opacity: 1; }
   to { opacity: 0; }
 }
+
+.fadeIn{                  /* 클래스 이름 사용 */
+  animation fadeIn;
+  animation-duration: 0.5s;
+}
+
+.fadeOut{
+  animation fadeOut;
+  animation-duration: 0.5s;
+}
