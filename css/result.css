@@ -7,6 +7,14 @@
   border-radius: 20px; /* 직각 -> 둥근 직사각형 형태롤 변환 */
 }
 
+#shareResult{
+  background-color: whitesmoke;
+  border: 1px solid #adb5bd;
+  width: 90%;
+  text-align: center;
+  border-radius: 20px;
+}
+
 .resultDesc{
   font-size: 18px;
 }
@@ -24,6 +32,19 @@
 }
 
 .kakao:hover, .kakao:focus {
+  background-color: rgb(92, 84, 16);
+  color: #fee500;
+}
+
+.gohome{
+  color: rgb(92, 84, 16);
+  background-color: #fee500;
+  font-size: 20px;
+  border: 0px;
+  border-radius: 20px;
+}
+
+.gohome:hover, .gohome:focus {
   background-color: rgb(92, 84, 16);
   color: #fee500;
 }
