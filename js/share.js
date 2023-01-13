@@ -23,8 +23,8 @@ function setShare(){
       {
         title: '결과 확인하기',
         link: {
-          mobileWebUrl: 'https://developers.kakao.com',
-          webUrl: 'https://developers.kakao.com',
+          mobileWebUrl: shareURL,
+          webUrl: shareURL,
         },
       },
     ],
