@@ -1,0 +1,19 @@
+@keyframes fadeIn {
+  from { opacity: 0; } /* opacity : 투명도 */
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@-webkit-keyframes fadeIn { /* 크롬에 적용 되는거 */
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@-webkit-keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
