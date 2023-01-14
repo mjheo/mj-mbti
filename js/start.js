@@ -100,4 +100,6 @@ function begin(){
     let qIdx = 0; //여기에서 1씩 증가 하나봄
     goNext(qIdx);
   }, 450);
+  const date = new Date();
+  console.log(date);
 } // 이 함수가 qna 항목이 나오는거!
